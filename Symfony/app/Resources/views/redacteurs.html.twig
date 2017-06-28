@@ -1,0 +1,55 @@
+{# app/Resources/views/redacteurs.html.twig #}
+
+{{ include('header.html.twig')}}
+
+{% block body %}
+
+{{ include('nav.html.twig')}}
+
+{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="orange">
+                        <h1 class="title h1">Rédacteurs</h1>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-primary">
+                            <th>Pseudo</th>
+                            <th>Photo</th>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Mail</th>
+                            <th>Fonction</th>
+                            </thead>
+                            <tbody>
+
+                                {% for redacteur in Redacteur %}
+                                    <tr>
+                                        <td>{{ redacteur.loginRedacteur }}</td>
+                                        <td>{{ redacteur.photoRedacteur }}</td>
+                                        <td>{{ redacteur.nomRedacteur }}</td>
+                                        <td>{{ redacteur.prenomRedacteur }}</td>
+                                        <td>{{ redacteur.emailRedacteur }}</td>
+                                        <td>{{ redacteur.idFonction.nomFonction }}</td>
+                                    </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+
+{% endblock %}
+
+{{ include('footer.html.twig')}}

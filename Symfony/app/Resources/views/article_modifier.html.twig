@@ -1,0 +1,18 @@
+{# app/Resources/views/admin/article_modifier.html.twig #}
+
+{{ include('header.html.twig')}}
+
+{% block body %}
+
+{{ include('nav.html.twig')}}
+
+{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+{{ form_widget(form) }}
+<button type="submit">Modifier</button>
+{{ form_end(form) }}
+{% endif %}
+
+{% endblock %}
+
+{{ include('footer.html.twig')}}

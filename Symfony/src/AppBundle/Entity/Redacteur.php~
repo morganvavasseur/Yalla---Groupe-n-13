@@ -1,0 +1,77 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Redacteur
+ *
+ * @ORM\Table(name="redacteur", indexes={@ORM\Index(name="FK_Redacteur_id_fonction", columns={"id_fonction"})})
+ * @ORM\Entity
+ */
+class Redacteur
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_redacteur", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idRedacteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login_redacteur", type="string", length=25, nullable=false)
+     */
+    private $loginRedacteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password_redacteur", type="string", length=50, nullable=false)
+     */
+    private $passwordRedacteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo_redacteur", type="string", length=50, nullable=true)
+     */
+    private $photoRedacteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_redacteur", type="string", length=25, nullable=false)
+     */
+    private $nomRedacteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom_redacteur", type="string", length=25, nullable=false)
+     */
+    private $prenomRedacteur;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email_redacteur", type="string", length=25, nullable=false)
+     */
+    private $emailRedacteur;
+
+    /**
+     * @var \Fonction
+     *
+     * @ORM\ManyToOne(targetEntity="Fonction")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="id_fonction", referencedColumnName="id_fonction")
+     * })
+     */
+    private $idFonction;
+
+
+}
