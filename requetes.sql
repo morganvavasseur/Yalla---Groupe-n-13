@@ -30,7 +30,7 @@ INSERT INTO `Redacteur` (`id_redacteur`, `login_redacteur`, `password_redacteur`
 #------------------------------------------------------------
 
 CREATE TABLE Article(
-        id_article         Int NOT NULL ,
+        id_article         Int Auto_increment  NOT NULL ,
         titre_article      Varchar (100) NOT NULL ,
         slug_article       Varchar (100) NOT NULL ,
         date_article       Datetime NOT NULL ,
@@ -54,7 +54,7 @@ INSERT INTO `Article` (`id_article`, `titre_article`,`slug_article`, `date_artic
 #------------------------------------------------------------
 
 CREATE TABLE Categorie(
-        id_categorie  Int NOT NULL ,
+        id_categorie  Int Auto_increment  NOT NULL ,
         nom_categorie Varchar (50) NOT NULL ,
         PRIMARY KEY (id_categorie )
 )ENGINE=InnoDB;
@@ -68,7 +68,7 @@ INSERT INTO `Categorie` (`id_categorie`, `nom_categorie`) VALUES
 #------------------------------------------------------------
 
 CREATE TABLE Langue(
-        id_langue  Int NOT NULL ,
+        id_langue  Int Auto_increment  NOT NULL ,
         nom_langue Varchar (50) NOT NULL ,
         PRIMARY KEY (id_langue )
 )ENGINE=InnoDB;
@@ -83,7 +83,7 @@ INSERT INTO `Langue` (`id_langue`, `nom_langue`) VALUES
 #------------------------------------------------------------
 
 CREATE TABLE Publication(
-        id_publication  Int NOT NULL ,
+        id_publication  Int Auto_increment NOT NULL ,
         nom_publication Varchar (50) NOT NULL ,
         PRIMARY KEY (id_publication )
 )ENGINE=InnoDB;
@@ -98,7 +98,7 @@ INSERT INTO `Publication` (`id_publication`, `nom_publication`) VALUES
 #------------------------------------------------------------
 
 CREATE TABLE Fonction(
-        id_fonction  Int NOT NULL ,
+        id_fonction  Int Auto_increment  NOT NULL ,
         nom_fonction Varchar (50) NOT NULL ,
         PRIMARY KEY (id_fonction )
 )ENGINE=InnoDB;
@@ -124,7 +124,7 @@ ALTER TABLE Article ADD CONSTRAINT FK_Article_id_publication FOREIGN KEY (id_pub
 --
 
 CREATE TABLE `fos_user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) Auto_increment NOT NULL,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `username_canonical` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
