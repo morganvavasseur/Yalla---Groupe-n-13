@@ -1,0 +1,76 @@
+{# app/Resources/views/admin/article.html.twig #}
+
+{{ include('admin/header.html.twig')}}
+
+{% block body %}
+
+{{ include('admin/nav.html.twig')}}
+
+{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        {% for article in article %}
+                        <div class="card-header" data-background-color="orange">
+                            <h1 class="title h1">Article</h1>
+                        </div>
+                        <div class="card-content">
+                            <div class="container-article">
+                                <section class="article">
+                                    <div class="top-page-img" style="background-image: url('{{ asset(article.imageArticle) }}');}"></div>
+                                    <div class="article-content">
+                                        <div class="article-title" style="background-image: url({{ asset('image/cadre.png') }});">
+                                            <h1>{{ article.titreArticle }}</h1>
+                                        </div>
+
+                                        <div class="social-section">
+                                            <ul class="social-box">
+                                                <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt=""></a></li>
+                                                <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt=""></a></li>
+                                                <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt=""></a></li>
+                                            </ul>
+                                            <a href="" class="event-link">Voir l'évènement sur facebook</a>
+                                        </div>
+                                        <div class="content-box">
+                                            <p>{{ article.paragrapheArticle | raw }}</p>
+                                            <a href="">Télécharger le communiqué de presse</a>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="card-content table-responsive">
+                                <table class="table">
+                                    <thead class="text-primary table-orange">
+                                    <tr>
+                                        <th>Catégorie</th>
+                                        <th>Rédacteur</th>
+                                        <th>Date de publication</th>
+                                        <th>Version</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>{{ article.idCategorie.nomCategorie }}</td>
+                                            <td>{{ article.idRedacteur.prenomRedacteur }} {{ article.idRedacteur.nomRedacteur }}</td>
+                                            <td>{{ article.dateArticle.format('j/m/Y, H:m:s')}}</td>
+                                            <td>{{ article.versionArticle }}</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endblock %}
+
+{{ include('admin/footer.html.twig')}}

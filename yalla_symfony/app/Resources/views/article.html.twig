@@ -1,0 +1,51 @@
+{# app/Resources/views/article.html.twig #}
+
+{{ include('header.html.twig')}}
+
+{% block body %}
+    {% for article in article %}
+    <div class="container-article">
+        <section class="top-page">
+            <a href="{{ path('articles') }}">‹ Revenir à la liste des articles</a>
+        </section>
+
+
+        <section class="article">
+            <div class="top-page-img" style="background-image: url('{{ asset(article.imageArticle) }}');}"></div>
+            <div class="article-content">
+                <div class="article-title">
+                    <h1>{{ article.titreArticle }}</h1>
+                </div>
+
+                <div class="social-section">
+                    <ul class="social-box">
+                        <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt=""></a></li>
+                        <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt=""></a></li>
+                        <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt=""></a></li>
+                    </ul>
+                    <a href="" class="event-link">Voir l'évènement sur facebook</a>
+                </div>
+                <div class="content-box">
+                    <p>{{ article.paragrapheArticle | raw }}</p>
+                    <a href="">Télécharger le communiqué de presse</a>
+                </div>
+            </div>
+        </section>
+        <section class="slide-article">
+            <ul>
+                <li><a href=""><img src="{{ asset('image/back.svg') }}" alt=""></a></li>
+                <li>changer d'article</li>
+                <li><a href=""><img src="{{ asset('image/next.svg') }}" alt=""></a></li>
+            </ul>
+        </section>
+
+        <section class="bottom-page">
+            <a href="{{ path('articles') }}">‹ Revenir à la liste des articles</a>
+        </section>
+
+    </div>
+    {% endfor %}
+
+{% endblock %}
+
+{{ include('footer.html.twig')}}
