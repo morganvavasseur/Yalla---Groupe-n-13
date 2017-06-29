@@ -1,0 +1,50 @@
+{# app/Resources/views/admin/categories_articles.html.twig #}
+
+{{ include('admin/header.html.twig')}}
+
+{% block body %}
+
+{{ include('admin/nav.html.twig')}}
+
+{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="orange">
+                        <h1 class="title h1">Catégories</h1>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-primary">
+                            <tr>
+                                <th>#</th>
+                                <th>Catégorie article</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for categorie in categories %}
+                                <tr>
+                                    <td>{{ categorie.idCategorie }}</td>
+                                    <td>{{ categorie.nomCategorie }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                        <div class="col-sm-4">
+                            <div class="form-group label-floating">
+                                <a href="{{ path("admin ajout categorie") }}" class="btn btn-warning">Ajouter</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{{ include('admin/footer.html.twig')}}

@@ -7,17 +7,17 @@ tinymce.init({
     plugins: [
     "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak",
     "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
-    "table contextmenu directionality textcolor paste fullpage textcolor colorpicker textpattern imagetools help" // template
+    "table contextmenu directionality textcolor paste textcolor colorpicker textpattern imagetools" // template
     ],
 
-    toolbar1: "undo redo | newdocument fullpage preview | cut copy paste | searchreplace | hr removeformat| ltr rtl | visualchars visualblocks nonbreaking pagebreak", // template
+    toolbar1: "undo redo | newdocument preview | cut copy paste | searchreplace | hr removeformat| ltr rtl | visualchars visualblocks nonbreaking pagebreak", // template
     toolbar2: "bold italic underline strikethrough subscript superscript charmap | styleselect formatselect fontselect fontsizeselect | forecolor backcolor",
-    toolbar3: "alignleft aligncenter alignright alignjustify | table | bullist numlist | outdent indent blockquote link unlink anchor image media | insertdatetime | help",
+    toolbar3: "alignleft aligncenter alignright alignjustify | table | bullist numlist | outdent indent blockquote link unlink anchor image media | insertdatetime",
     // content_css: [
     // '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
     // '//www.tinymce.com/css/codepen.min.css'],
 
-    menubar: true,
+    menubar: false,
     toolbar_items_size: 'small',
     visualblocks_default_state: true,
 

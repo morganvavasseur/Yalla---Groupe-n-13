@@ -1,0 +1,40 @@
+{# app/Resources/views/admin/langues_articles_ajout.html.twig #}
+
+{{ include('admin/header.html.twig')}}
+
+{% block body %}
+
+
+    {{ include('admin/nav.html.twig')}}
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header" data-background-color="orange">
+                                <h1 class="title h1">Ajouter Langue</h1>
+                            </div>
+                            <div class="card-content">
+                                {{ form_start(form) }}
+                                <div class="col-sm-4">
+                                    <div class="form-group label-floating">
+                                        {{ form_label(form.nomLangue, "Langue", {'label_attr': {'class': 'control-label'}}) }}
+                                        {{ form_widget(form.nomLangue, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <input type="submit" value="Envoyer" class="btn btn-warning">
+                                    </div>
+                                </div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{{ include('admin/footer.html.twig')}}

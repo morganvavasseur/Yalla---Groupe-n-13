@@ -12,6 +12,51 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Article
 {
+    public function slugify($text)
+    {
+        // replace non letter or digits by -
+        $text = preg_replace('#[^\\pL\d]+#u', '-', $text);
+
+        // trim
+        $text = trim($text, '-');
+
+        // transliterate
+        if (function_exists('iconv'))
+        {
+            $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+        }
+
+        // lowercase
+        $text = strtolower($text);
+
+        // remove unwanted characters
+        $text = preg_replace('#[^-\w]+#', '', $text);
+
+        if (empty($text))
+        {
+            return 'n-a';
+        }
+
+        return $text;
+    }
+
+    public function versionify($version)
+    {
+        if($version == 1)
+        {
+            $version = $version + 1;
+        }
+        else
+        {
+            $version= 1;
+        }
+        return $version ;
+    }
+
+    public function __construct()
+    {
+        $this->dateArticle = new \DateTime('now');
+    }
     /**
      * @var integer
      *
@@ -132,7 +177,7 @@ class Article
     public function setTitreArticle($titreArticle)
     {
         $this->titreArticle = $titreArticle;
-
+        $this->SetSlugArticle($this->titreArticle);
         return $this;
     }
 
@@ -156,7 +201,7 @@ class Article
     public function setSlugArticle($slugArticle)
     {
         $this->slugArticle = $slugArticle;
-
+        $this->slugArticle = $this->slugify($slugArticle);
         return $this;
     }
 
@@ -276,7 +321,7 @@ class Article
     public function setVersionArticle($versionArticle)
     {
         $this->versionArticle = $versionArticle;
-
+        $this->versionArticle = $this->versionify($versionArticle);
         return $this;
     }
 

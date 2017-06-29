@@ -4,26 +4,124 @@
 
 {% block body %}
 
-{{ include('nav.html.twig')}}
-
-{% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-header" data-background-color="orange">
-                            <h1 class="title h1">Connexion</h1>
-                        </div>
-                        <div class="card-content">
-                            {{ render(controller('FOSUserBundle:Security:login')) }}
-                        </div>
-                    </div>
-                </div>
+    <main class="row index">
+        <ul class="ariane">
+            <a href="{{ path('home') }}"><li>Accueil</li></a>
+        </ul>
+        <div class="row">
+            <div class="title">
+                <span></span>
+                <h1>Nos derniers articles</h1>
             </div>
         </div>
-    </div>
-{% endif %}
+        <div class="row">
+            <article id="last-article" class="content col-s-12 col-m-10 col-m-center col-l-10 col-l-center">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12 col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-6 col-l-6 row content" id="img-article">
+                        <img src="img-content/img1.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-6 col-l-6 row content">
+                        <h2>Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une levée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <div class="btn">
+                            <p>Lire l'article</p>
+                        </div>
+                        <h4><a href="">Partager l'article</a></h4>
+                        <ul class="social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+        <div id="list-article" class="row">
+            <article class="content row col-s-12 col-m-5 col-l-3">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12 	col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-12 row content img-article">
+                        <img src="img-content/img1.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-12 row content">
+                        <h2>Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une evée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <h4>Partager l'article</h4>
+                        <ul class="social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="content row col-s-12 col-m-5 col-l-3">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12 	col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-12 row content img-article">
+                        <img src="img-content/mission2.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-12 row content">
+                        <h2>Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une evée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <h4>Partager l'article</h4>
+                        <ul class="social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="content row col-s-12 col-m-5 col-l-3">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12 	col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-12 row content img-article">
+                        <img src="img-content/missions-head.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-12 row content">
+                        <h2>Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une evée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <h4>Partager l'article</h4>
+                        <ul class="social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+    </main>
 
 {% endblock %}
 
