@@ -1,26 +1,22 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Actualités</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700,900" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
-</head>
-<body>
+{# app/Resources/views/article.html.twig #}
+
+{{ include('header.html.twig')}}
+
+{% block body %}
+
     <div class="container-article">
-       <section class="top-page">
+        <section class="top-page">
             <a href="list-article_2.html">‹ Revenir à la liste des articles</a>
         </section>
-        
-        
+
+
         <section class="article">
-           <div class="top-page-img"></div>
+            <div class="top-page-img"></div>
             <div class="article-content">
                 <div class="article-title">
                     <h1>Fest-noz solidaire le 29 octobre à Poullaouen</h1>
                 </div>
-                
+
                 <div class="social-section">
                     <ul class="social-box">
                         <li><a href=""><img src="img-layout/icons/facebook.png" alt=""></a></li>
@@ -48,11 +44,14 @@
                 <li><a href=""><img src="img-layout/next.svg" alt=""></a></li>
             </ul>
         </section>
-        
+
         <section class="bottom-page">
             <a href="list-article_2.html">‹ Revenir à la liste des articles</a>
         </section>
 
     </div>
-</body>
-</html>
+
+
+{% endblock %}
+
+{{ include('footer.html.twig')}}
