@@ -1,0 +1,43 @@
+{# app/Resources/views/articles.html.twig #}
+
+{{ include('header.html.twig')}}
+
+{% block body %}
+
+    <h1>Les news</h1>
+    <section class="content">
+        {% for article in articles %}
+
+        <article>
+
+                <figure>
+                    <img src='{{ asset(article.imageArticle) }}' alt="">
+                    <figcaption>
+                        <div class="chiffre">
+                            <p>{{ article.dateArticle.format('j')}}</p>
+                        </div>
+                        <div class="large">
+                            <p>{{ article.dateArticle.format('M Y')}}</p>
+                        </div>
+                    </figcaption>
+                </figure>
+                <div class="descriptif">
+                    <a href="/article/{{ article.slugArticle }}"><h3>{{ article.titreArticle }}</h3></a>
+                    <p class="description-courte">{{ article.paragrapheArticle | striptags | slice(0, 100) }}</p>
+                    <a href="" class="see-event">Voir l'évènement sur facebook</a>
+                    <p>Partager:</p>
+                    <ul>
+                        <li class="facebook-icon"><a href=""><img src="{{ asset('image/facebook.png') }}" alt=""></a></li>
+                        <li class="twitter-icon"><a href=""><img src="{{ asset('image/twitter.png') }}" alt=""></a></li>
+                        <li class="insta-icon"><a href=""><img src="{{ asset('image/instagram.png') }}" alt=""></a></li>
+                    </ul>
+                </div>
+
+        </article>
+
+        {% endfor %}
+    </section>
+
+{% endblock %}
+
+{{ include('footer.html.twig')}}

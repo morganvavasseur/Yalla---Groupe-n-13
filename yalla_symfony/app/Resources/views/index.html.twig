@@ -1,0 +1,150 @@
+{# app/Resources/views/index.html.twig #}
+
+{{ include('header.html.twig')}}
+
+{% block body %}
+
+    <main class="row index">
+        <section class="who-are-we">
+            <div class="top-page-img"></div>
+            <div class="article-content">
+                <div class="article-title">
+                    <h1>Qui sommes-nous?</h1>
+                    <p class="description-section">
+                        Yalla a pour but de remettre les enfants syrien sur le chemin de l’école suite aux guerres.
+                    </p>
+                    <a href="">Voir plus</a>
+                </div>
+            </div>
+        </section>
+        <div class="row">
+            <div class="title">
+                <span></span>
+                <h1>Nos derniers articles</h1>
+            </div>
+        </div>
+        <div class="row">
+            <article id="last-article" class="content col-s-12 col-m-10 col-m-center col-l-10 col-l-center">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12 col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-6 row content" id="img-article">
+                        <img src="img-content/img1.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-6 row content">
+                        <h2>Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une levée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <div class="col-s-12 col-s-center">
+                            <div class="btn">
+                                <p>Lire l'article</p>
+                            </div>
+                        </div>
+                        <h4 class="col-s-12 col-s-center"><a href="">Partager l'article</a></h4>
+                        <ul class="col-s-12 col-s-center social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+        <div id="list-article" class="row">
+            <article class="content row col-s-12 col-m-5 col-l-3">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12 	col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-12 row content img-article">
+                        <img src="img-content/img1.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-12 row content">
+                        <h2 class="col-s-12 col-s-center">Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une evée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <h4 class="col-s-12 col-s-center">Partager l'article</h4>
+                        <ul class="col-s-12 col-s-center social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="content row col-s-12 col-m-5 col-l-3">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12   col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-12 row content img-article">
+                        <img src="img-content/img1.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-12 row content">
+                        <h2 class="col-s-12 col-s-center">Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une evée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <h4 class="col-s-12 col-s-center">Partager l'article</h4>
+                        <ul class="col-s-12 col-s-center social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+            <article class="content row col-s-12 col-m-5 col-l-3">
+                <div class="date">
+                    <div id="day">
+                        <p>La</p>
+                    </div>
+                    <div id="month">
+                        <p>Nouvelle</p>
+                    </div>
+                </div>
+                <figure class="col-s-12 col-s-center col-m-12   col-m-center col-l-12 col-l-center row content">
+                    <div class="col-s-12 col-m-12 col-l-12 row content img-article">
+                        <img src="img-content/img1.jpg" alt="">
+                    </div>
+                    <figcaption class="col-s-12 col-m-12 col-l-12 row content">
+                        <h2 class="col-s-12 col-s-center">Fest-noz solidaire le 29 octobre à Poullaouen</h2>
+                        <p>Yalla vous convie le samedi 29 Octobre à une evée de fonds dont les bénéfices reviendront à son école d’Aley située au Liban</p>
+                        <h4 class="col-s-12 col-s-center">Partager l'article</h4>
+                        <ul class="col-s-12 col-s-center social">
+                            <li><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                            <li><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                            <li><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </article>
+        </div>
+        <section class="nos-partenaires">
+            <div class="box-title">
+                <h2><span>|</span>Nos partenaires</h2>
+            </div>
+            <div class="logos-box">
+                <figure><img src="img-layout/partenaires/calam.jpg" alt="logo calam"></figure>
+                <figure><img src="img-layout/partenaires/www.jpg" alt="logo women's world wild web"></figure>
+                <figure><img src="img-layout/partenaires/institut.jpg" alt="institut francais du Liban"></figure>
+                <figure><img src="img-layout/partenaires/codssy.jpg" alt="Codssy"></figure>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
+
+{{ include('footer.html.twig')}}

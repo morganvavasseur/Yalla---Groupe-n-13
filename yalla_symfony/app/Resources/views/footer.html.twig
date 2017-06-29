@@ -1,0 +1,60 @@
+{# app/Resources/views/footer.html.twig #}
+
+
+<footer>
+    <div class="logo-box">
+        <figure><img src="{{ asset('image/yallalogo.png') }}" alt="logo"></figure>
+    </div>
+
+    <div class="info-box">
+
+        <!--***   nous suivre  ***-->
+        <div class="follow-us-box footer-element">
+            <h3>Nous suivre</h3>
+            <ul class="follow-us">
+                <li class="text-link"><a href="">facebook</a></li>
+                <li class="text-link"><a href="">twitter</a></li>
+                <li class="text-link"><a href="">instagram</a></li>
+                <li class="icon-link"><a href=""><img src="{{ asset('image/facebook.png') }}" alt="facebook"></a></li>
+                <li class="icon-link"><a href=""><img src="{{ asset('image/twitter.png') }}" alt="twitter"></a></li>
+                <li class="icon-link"><a href=""><img src="{{ asset('image/instagram.png') }}" alt="instagram"></a></li>
+            </ul>
+        </div>
+
+        <!--***   archives  ***-->
+        <ul class="archives footer-element">
+            <h3>Archives</h3>
+            <li><a href="">mai 2017</a></li>
+            <li><a href="">avril 2017</a></li>
+            <li><a href="">mars 2017</a></li>
+            <li><a href="">Plus d'articles...</a></li>
+        </ul>
+
+        <!--***   nous soutenir  ***-->
+        <ul class="support-us footer-element">
+            <h3 class="support-us-title">Nous soutenir</h3>
+            <li><a href="">Faire un don</a></li>
+            <li class="support-us-subtitle">Newsletter</li>
+            <li>
+                <form action="">
+                    <input type="text" placeholder="Adresse mail...">
+                    <input type="submit" value="envoyer">
+                </form>
+            </li>
+        </ul>
+
+        <!--***   mentionsLégales + searchBar  ***-->
+        <ul class="other footer-element">
+            <li class="search-bar">
+                <form action="">
+                    <input type="search" placeholder="Rechercher">
+                </form>
+            </li>
+            <li class="legal"><a href="">mentions légales</a></li>
+            <li class="contact"><a href="">nous contacter</a></li>
+        </ul>
+    </div>
+</footer>
+</body>
+</html>
+
