@@ -1,4 +1,4 @@
-#Refonte du site yalla-enfants.com 
+# Refonte du site yalla-enfants.com 
 
 Dans le cadre de notre projet de fin d'année nous avons eu pour mission, la refonte du site de l'asociation: Yalla pour les enfants!
 
